@@ -30,6 +30,40 @@
 		===[ Default Style ]===
 ======================================*/
 	/* Variables */
+	.teacher-icon {
+		font-size: 1.5rem;
+		color: #333;
+		transition: color 0.3s;
+	}
+	
+	.teacher-icon:hover {
+		color: #007bff;
+	}
+	
+	.teachars-info p {
+		font-size: 1.2rem;
+	}
+	.teacher-body {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.faculty-img {
+        width: 100%;
+        max-height: 250px;
+        object-fit: contain;
+        background-color: #f8f8f8;
+        padding: 10px;
+    }
+
+    @media (max-width: 576px) {
+        .faculty-img {
+            max-height: 220px;
+			font-size: 12px;
+			
+        }
+    }
 	
 	body {
 	    font-family: "Open Sans", sans-serif;
@@ -1963,7 +1997,7 @@
 	    margin: 0 5px;
 	    display: inline-block;
 	}
-	.home_version_02 .teachers-area .teacher-body .teachars-info ul li .teacher-icon {
+	.home_version_02 .teachers-area .teacher-body .teachars-info ul li  {
 	    background: #f9f9f9;
 	    border-radius: 100%;
 	    color: #a7a7a7;
@@ -1972,7 +2006,7 @@
 	    width: 30px;
 	    transition: all 0.3s ease-in-out;
 	}
-	.home_version_02 .teachers-area .teacher-body .teachars-info ul li .teacher-icon:hover {
+	.home_version_02 .teachers-area .teacher-body .teachars-info ul li  {
 	    box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
 	    transition: all 0.3s ease-in-out;
 	    background: #87CEFA;
@@ -6500,7 +6534,7 @@
 	    margin: 0 5px;
 	    display: inline-block;
 	}
-	.teachers-01 .teachers-area .teachers-wapper-01 .teacher-body .teachars-info ul li .teacher-icon {
+	.teachers-01 .teachers-area .teachers-wapper-01 .teacher-body .teachars-info ul li  {
 	    background: #f9f9f9;
 	    border-radius: 100%;
 	    color: #a7a7a7;
@@ -6509,7 +6543,7 @@
 	    width: 30px;
 	    transition: all 0.3s ease-in-out;
 	}
-	.teachers-01 .teachers-area .teachers-wapper-01 .teacher-body .teachars-info ul li .teacher-icon:hover {
+	.teachers-01 .teachers-area .teachers-wapper-01 .teacher-body .teachars-info ul li  {
 	    box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
 	    transition: all 0.3s ease-in-out;
 	    background: #87CEFA;
