@@ -89,6 +89,35 @@
 	padding-top:14%;
 	width:80%;
 }	
+.modal-ann {
+			position: fixed; /* Ensures wrapping only around the image */
+    top: 50%; /* Position from the top of the page */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+    z-index: 1000;
+    background: none; /* No background for parent */
+    width: fit-content; /* Parent adjusts to child's width */
+    height: fit-content; /* Parent adjusts to child's height */
+    border-radius: 8px;
+      }
+
+      .modal-content {
+         position: relative; /* Positions content within the modal */
+         padding: 0; /* No extra space around the image */
+      }
+      .modal-content img {
+         display: block;
+         width: auto; /* Keep original image dimensions */
+         max-width: 100%; /* Adjust for responsive layout */
+         height: auto; /* Maintain aspect ratio */
+         border-radius: 8px;
+         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for style */
+      }
+      @keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(7, 255, 48, 0.6); }
+  70% { box-shadow: 0 0 0 10px rgba(24, 152, 184, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
+}
 </style>
 </head>
 
@@ -136,6 +165,14 @@
 <!--  </div>-->
 <!--</div>-->
 <!--Modal CIIBVR-2023 Ends -->
+
+<div id="modal-ann" class="modal-ann"> 
+        <div class="modal-content">
+            <img src="./images/common/CAHR1.jpg" alt="popup">
+            
+            
+        </div>
+      </div>
 
 	
 	<!-- Modal NIRF start -->
@@ -619,11 +656,11 @@
 							
 							<div class="courses-content-box">
 								<div class="courses-content">
-									<h3><a href="#">Bachelor of Science (Medical Imaging Technology)</a></h3><br/>
+									<h3><a href="#"> Bachelor's of Medical Radiology and Imaging Technology</a></h3><br/>
 									<div class="">
 										<p><b>Course Duration:</b>&nbsp; 04 Years</p>
 										<p><b>Intake:</b>&nbsp; 30 Seats</p>
-										<p><b>Fees:</b>&nbsp; Rs 60,000  </p>
+										<p><b>Fees:</b>&nbsp; Rs 65,000  </p>
 										<p><b>More Details: </b>&nbsp; <a href="https://charusat.ac.in/bdips/files/Bachelor%20Of%20Medical%20Laboratory%20Technology.pdf" target="_blank">View</a></p>
 										<!--<p><b>Brochure:</b>&nbsp; <a href="images/BBA.jpg" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></p>-->
 									</div>	
@@ -636,11 +673,11 @@
 						<div class="single-courses">
 							<div class="courses-content-box">
 								<div class="courses-content">
-									<h3><a href="#">Bachelor of Science (Medical Laboratory Technology) </a></h3><br/>
+									<h3><a href="#"> Bachelor of Medical Laboratory Sciences (BMLS) </a></h3><br/>
 									<div class="">
-									<p><b>Course Duration:</b>&nbsp; 03 + 01 Years </p>
+									<p><b>Course Duration:</b>&nbsp; 04 Years </p>
 										<p><b>Intake:</b>&nbsp; 30 Seats </p>
-										<p><b>Fees:</b>&nbsp; Rs 50,000/-</p>
+										<p><b>Fees:</b>&nbsp; Rs 55,000/-</p>
 										<p><b>More Details: &nbsp;</b><a href="https://charusat.ac.in/bdips/files/Bachelor%20Of%20Medical%20Radiology.pdf" target="_blank">View</a></p>
 										<!--<p><b>Brochure:</b> -- </p>-->
 									</div>	
@@ -654,11 +691,11 @@
 							
 							<div class="courses-content-box">
 								<div class="courses-content">
-									<h3><a href="#">Bachelor of Science<br/> (Operation Theater & Anesthesia Technology)</a></h3>
+									<h3><a href="#">Baccalaureate of Anaesthesia and Operation Theatre Technology (B.AOTT)</a></h3>
 									<div class="">
 										<p><b>Duration:</b>&nbsp; 04 Years</p>
 										<p><b>Intake:</b>&nbsp; 30 Seats</p>
-										<p><b>Fees:</b>&nbsp; Rs. 60,000/-(Per Year)</p>
+										<p><b>Fees:</b>&nbsp; Rs. 65,000/-(Per Year)</p>
 										<p><b>More Details: &nbsp;</b><a href="https://charusat.ac.in/bdips/files/Bachelor%20Of%20Operation%20Theatre.pdf" target="_blank">View</a></p>
 									</div>	
 								</div>
@@ -671,9 +708,9 @@
 							
 							<div class="courses-content-box">
 								<div class="courses-content">
-									<h3><a href="#">Bachelor of Optometry <br/>(BOPTM)</a></h3>
+									<h3><a href="#">Bachelor's of Optometry <br/>(BOPTM)</a></h3>
 									<div class="">
-										<p><b>Course Duration:</b>&nbsp; 04 Years</p>
+										<p><b>Course Duration:</b>&nbsp; 05 Years</p>
 										<p><b>Intake:</b>&nbsp; 20 Seats</p>
 										<p><b>Fees:</b>&nbsp; Rs 1,06,000/-</p>
 										<p><b>More Details:</b>&nbsp;<a href="https://charusat.ac.in/bdips/files/Bachelor%20of%20Optometry.pdf" target="_blank">View</a></p>
@@ -693,11 +730,11 @@
 							
 							<div class="courses-content-box">
 								<div class="courses-content">
-									<h3><a href="#">Master of Science (Medical Laboratory Technology)</a></h3>
+									<h3><a href="#">Masters of Medical Laboratory Sciences (MMLS)</a></h3>
 									<div class="">
 										<p><b>Duration:</b>&nbsp; 02 Years</p>
 										<p><b>Intake:</b>&nbsp; 30 Seats</p>
-										<p><b>Fees:</b>&nbsp; Rs. 80,000/-(Per Year)</p>
+										<p><b>Fees:</b>&nbsp; Rs. 85,000/-(Per Year)</p>
 										<p><b>More Details: &nbsp;</b><a href="https://charusat.ac.in/bdips/#" target="_blank">View</a></p>
 									</div>	
 								</div>
@@ -711,7 +748,7 @@
 							
 							<div class="courses-content-box">
 								<div class="courses-content">
-									<h3><a href="#">Master of Science (Medical Imaging Technology)</a></h3>
+									<h3><a href="#">Master's of Medical Radiology and Imaging Technology</a></h3>
 									<div class="">
 										<p><b>Duration:</b>&nbsp; 02 Years</p>
 										<p><b>Intake:</b>&nbsp; 05 Seats</p>
@@ -728,7 +765,7 @@
 							
 							<div class="courses-content-box">
 								<div class="courses-content">
-									<h3><a href="#">Master of Science (Operation Theater & Anaesthesia Technology)</a></h3>
+									<h3><a href="#">Master's in Anaesthesia and Operating Theatre Technology (M.AOTT)</a></h3>
 									<div class="">
 										<p><b>Duration:</b>&nbsp; 02 Years</p>
 										<p><b>Intake:</b>&nbsp; 10 Seats</p>
@@ -756,22 +793,7 @@
 						</div><!-- Ends: .single courses -->
 					</div><!-- Ends: . -->
 
-					<div class="col-sm-4 single-courses-box" style="margin-top:10px;">
-						<div class="single-courses">
-							
-							<div class="courses-content-box">
-								<div class="courses-content">
-									<h3><a href="#">Post Graduate Diploma in Medical Laboratory Technology(PGDMLT)</a></h3>
-									<div class="">
-										<p><b>Intake:</b>&nbsp; 30 Seats</p>
-										<p><b>Fees:</b>&nbsp; Rs. 34,500/-(Per Year)</p>
-										<p><b>More Details: &nbsp;</b><a href="https://charusat.ac.in/bdips/files/PGDCH Prospectus 2021-22.pdf" target="_blank">View</a></p>
-									</div>	
-								</div>
-							</div>
-						</div><!-- Ends: .single courses -->
-					</div><!-- Ends: . -->
-
+					
 					
 					
 					
@@ -834,9 +856,9 @@
 			<div class="teacher-body text-center p-3 border rounded h-100 shadow-sm bg-white">
 				<img src="images/faculty_photo_25/Manna Debnath.png" alt='' class="faculty-img img-fluid mb-3 mx-auto d-block" style="max-height: 200px; object-fit: cover;">
 				<div class="teachars-info">
-					<h5 class="fw-bold mb-1">Mr. Manna Debnath</h5>
+					<h5 class="fw-bold mb-1">Dr. Manna Debnath</h5>
 					<span class="d-block mb-2 small">Assistant Professor</span>
-					<p class="mb-1 small">MSc. MIT, Ph.D. (Pursuing)</p>
+					<p class="mb-1 small">MSc. MIT, Ph.D</p>
 					<hr class="my-2">
 					<p class="small">CT, MRI (Cartilage Mapping), and Interventional Radiology</p>
 					<div class="d-flex justify-content-center flex-wrap gap-3 mt-2">
@@ -891,27 +913,9 @@
 				</div>
 			</div>
 			<br>
-		</div><div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-		<h3>Head, OTAT</h3>
-			<div class="teacher-body text-center p-3 border rounded h-100 shadow-sm bg-white">
-				<img src="images/faculty_photo_25/Karan Morje.png" alt='' class="faculty-img img-fluid mb-3 mx-auto d-block" style="max-height: 200px; object-fit: cover;">
-				<div class="teachars-info">
-					<h5 class="fw-bold mb-1"> Mr. Karan Morje</h5>
-					<span class="d-block mb-2 small">Assistant Professor</span>
-					<p class="mb-1 small">MSc. OTAT, Ph.D. (Pursuing)</p>
-					<hr class="my-2">
-					<p class="small">Airway indices, Regional Anesthesia and Post operative analgesia techniques</p>
-					<div class="d-flex justify-content-center flex-wrap gap-3 mt-2">
-					<a href="https://vidwan.inflibnet.ac.in/profile/162769" target="_blank" title="Profile"><i class="fa fa-user teacher-icon"></i></a>
-					<a href="mailto:karanmorje.cips@charusat.ac.in " title="karanmorje.cips@charusat.ac.in"><i class="fa fa-envelope teacher-icon"></i></a>
-					<a href="tel:+919819606916" title="+919819606916"><i class="fa fa-phone teacher-icon"></i></a>
-					<a href="https://www.linkedin.com/in/karan-morje-837835178?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8qL7cmwvTZezShGrI3EyRw%3D%3D" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-					<a href="javascript:void(0);" title="Website"><i class="fa fa-globe"></i></a>
-					</div>
-				</div>
-			</div>
 		</div>
-		<p></p>
+	
+	
 		<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
 			<h3> Department of MLT  </h3>
 			<div class="teacher-body text-center p-3 border rounded h-100 shadow-sm bg-white">
@@ -1017,7 +1021,7 @@
 		<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" style='margin-top:45px'>
 			
 			<div class="teacher-body text-center p-3 border rounded h-100 shadow-sm bg-white">
-				<img src="images/faculty_photo_25/Dr. Meghna Diarsa.png" alt='' class="faculty-img img-fluid mb-3 mx-auto d-block" style="max-height: 200px; object-fit: cover;">
+				<img src="images/faculty_photo_25/Meghana.jpg" alt='' class="faculty-img img-fluid mb-3 mx-auto d-block" style="max-height: 200px; object-fit: cover;">
 				<div class="teachars-info">
 					<h5 class="fw-bold mb-1">Dr. Meghna Diarsa</h5>
 					<span class="d-block mb-2 small">Assistant Professor</span>
@@ -1114,27 +1118,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" style='margin-top:45px'>
-			
-			<div class="teacher-body text-center p-3 border rounded h-100 shadow-sm bg-white">
-				<img src="images/faculty_photo_25/Brija Trivedi.png" alt='' class="faculty-img img-fluid mb-3 mx-auto d-block" style="max-height: 200px; object-fit: cover;">
-				<div class="teachars-info">
-					<h5 class="fw-bold mb-1">Ms. Brija Trivedi</h5>
-					<span class="d-block mb-2 small">Laboratory Technician</span>
-					<p class="mb-1 small">BSc. PgDMLT</p>
-					<hr class="my-2">
-					<p class="small">Molecular Diagnostics</p>
-					<div class="d-flex justify-content-center flex-wrap gap-3 mt-2">
-					<a href="https://vidwan.inflibnet.ac.in/profile/" target="_blank" title="Profile"><i class="fa fa-user teacher-icon"></i></a>
-					<a href="mailto:brijatrivedi.cips@charusat.ac.in" title="brijatrivedi.cips@charusat.ac.in"><i class="fa fa-envelope teacher-icon"></i></a>
-					<a href="tel:+918469076742" title="+91 2697 265199"><i class="fa fa-phone teacher-icon"></i></a>
-					<a href="https://www.linkedin.com/in/brija-shukla-a60a95359/" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-					<a href="javascript:void(0);" title="Website"><i class="fa fa-globe"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
 	</div>
 	<div class="row" id="faculty_slider_01_id">
 		<p></p>
@@ -1204,7 +1187,7 @@
 
 		<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" style='margin-top:45px'>
 			<div class="teacher-body text-center p-3 border rounded h-100 shadow-sm bg-white">
-				<img src="images/faculty_photo_25/Devanshi Dalal.png" alt='' class="faculty-img img-fluid mb-3 mx-auto d-block" style="max-height: 200px; object-fit: cover;">
+				<img src="images/faculty_photo_25/Devanshi.JPG" alt='' class="faculty-img img-fluid mb-3 mx-auto d-block" style="max-height: 200px; object-fit: cover;">
 				<div class="teachars-info">
 					<h5 class="fw-bold mb-1"> Optom.Devanshi Dalal</h5>
 					<span class="d-block mb-2 small">Assistant Professor</span>
@@ -1244,48 +1227,9 @@
 	</div>
 	<div class="row" id="faculty_slider_01_id">
 		<p></p>
-		<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+		
 			<h3> Department of OTAT </h3>
-			<div class="teacher-body text-center p-3 border rounded h-100 shadow-sm bg-white">
-				<img src="images/faculty_photo_25/Mohammad Akhlaque Ahmad.png" alt='' class="faculty-img img-fluid mb-3 mx-auto d-block" style="max-height: 200px; object-fit: cover;">
-				<div class="teachars-info">
-					<h5 class="fw-bold mb-1">Mr. Mohammad Akhlaque Ahmad</h5>
-					<span class="d-block mb-2 small">Assistant Professor</span>
-					<p class="mb-1 small">MSc. OTAT, Ph.D. (Pursuing)</p>
-					<hr class="my-2">
-					<p class="small">Mechanism of General Anesthesia, Post operative Pain management, Recent advancement in operation theatre and anesthesia technology</p>
-					<div class="d-flex justify-content-center flex-wrap gap-3 mt-2">
-					<a href="https://vidwan.inflibnet.ac.in/profile/162803" target="_blank" title="Profile"><i class="fa fa-user teacher-icon"></i></a>
-					<a href="mailto:akhlaqueahmad.cips@charusat.ac.in" title="akhlaqueahmad.cips@charusat.ac.in"><i class="fa fa-envelope teacher-icon"></i></a>
-					<a href="tel:+918292777202" title="+91 2697 265199"><i class="fa fa-phone teacher-icon"></i></a>
-					<a href="https://www.linkedin.com/in/akhlaque-ahmad-536219114/" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-					<a href="javascript:void(0);" title="Website"><i class="fa fa-globe"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-		<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" style='margin-top:45px'>
 			
-			<div class="teacher-body text-center p-3 border rounded h-100 shadow-sm bg-white">
-				<img src="images/faculty_photo_25/Harshad Khade.png" alt='' class="faculty-img img-fluid mb-3 mx-auto d-block" style="max-height: 200px; object-fit: cover;">
-				<div class="teachars-info">
-					<h5 class="fw-bold mb-1">Mr. Harshad Ram Khade</h5>
-					<span class="d-block mb-2 small">Assistant Professor</span>
-					<p class="mb-1 small">MSc. OTAT, Ph.D. (Pursuing)</p>
-					<hr class="my-2">
-					<p class="small">Improving Surgical And Anesthesia Procedures Through Innovative Technology Integration And Evidence-Based Practices For Enhanced Patient Outcomes.</p>
-					<div class="d-flex justify-content-center flex-wrap gap-3 mt-2">
-					<a href="https://vidwan.inflibnet.ac.in/profile/442349" target="_blank" title="Profile"><i class="fa fa-user teacher-icon"></i></a>
-					<a href="mailto:harshadkhade.cips@charusat.ac.in" title="harshadkhade.cips@charusat.ac.in"><i class="fa fa-envelope teacher-icon"></i></a>
-					<a href="tel:+918087788417" title="+91 2697 265199"><i class="fa fa-phone teacher-icon"></i></a>
-					<a href="https://www.linkedin.com/in/harshad-khade-otat-39787814b/" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-					<a href="javascript:void(0);" title="Website"><i class="fa fa-globe"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
 		
 
 		<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" style='margin-top:45px'>
@@ -1760,6 +1704,17 @@
     $(document).ready(function(){
         $("#myModal_CIIBVR").modal('show');
     });
+	 $(document).ready(function () {
+            // Show the modal on page load
+            $('#modal-ann').show();
+
+            // Hide the modal when clicking outside the image
+            $(document).on('click', function (event) {
+               if (!$(event.target).closest('.modal-content').length) {
+                     $('#modal-ann').hide();
+               }
+            });
+         });
 </script>	
 </body>
 </html>
