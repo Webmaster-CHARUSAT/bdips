@@ -1,1481 +1,569 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>BDIAS – Bapubhai Desaibhai Patel Institute of Allied and Healthcare Sciences</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <title>BDIAS - Bapubhai Desaibhai Patel Institute of Allied and Healthcare Sciences</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Meta -->
-  <meta name="description" content="Bapubhai Desaibhai Patel Institute of Allied and Healthcare Sciences (BDIAS), a constituent institute of CHARUSAT." />
-  <meta name="keywords" content="BDIAS, Paramedical, Allied Health Sciences, CHARUSAT, Changa, Healthcare, Optometry, Radiology, Lab Technology" />
+  <meta name="description" content="BDIAS - Bapubhai Desaibhai Patel Institute of Allied and Healthcare Sciences, a constituent institute of CHARUSAT.">
+  <meta name="keywords" content="BDIAS, allied health sciences, paramedical, CHARUSAT, Changa">
   <meta name="robots" content="index, follow">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="images/cipslogo.jpg" type="image/x-icon">
+  <link rel="icon" href="images/cipslogo.jpg" type="image/x-icon">
 
-  <!-- Bootstrap 5 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Google Fonts (similar to charusat.ac.in) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- AOS (Animate On Scroll) -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-
-  <!-- Custom Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --bdias-primary: #0b5ed7;
-      --bdias-accent:  #fec722;
-      --bdias-dark:    #111827;
-    }
-
-    * {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      color: #111827;
-      background-color: #f9fafb;
-    }
-
-    h1, h2, h3, h4, h5 {
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    /* Top bar */
-    .top-bar {
-      background: #111827;
-      color: #f9fafb;
-      font-size: 0.85rem;
-      padding: 0.35rem 0;
-    }
-
-    .top-bar a {
-      color: #fec722;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .top-bar a:hover {
-      opacity: 0.85;
-    }
-
-    .top-bar i {
-      margin-right: 0.25rem;
-    }
-
-    /* Navbar */
-    .navbar {
-      transition: all 0.3s ease;
-    }
-
-    .navbar.scrolled {
-      background: rgba(15, 23, 42, 0.98) !important;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.35);
-    }
-
-    .navbar-brand span {
-      font-size: 1.15rem;
-      line-height: 1.2;
-    }
-
-    .nav-link {
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      font-size: 0.9rem;
-    }
-
-    .nav-link.active, .nav-link:hover {
-      color: var(--bdias-accent) !important;
-    }
-
-    /* Hero (Slider) */
-    .hero {
-      position: relative;
-      min-height: 70vh;
-      color: white;
-      background: #020617;
-    }
-
-    .hero .carousel-item {
-      position: relative;
-      min-height: 70vh;
-    }
-
-    .hero .carousel-item img {
-      object-fit: cover;
-      width: 100%;
-      height: 70vh;
-      filter: brightness(0.45);
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(120deg, rgba(15, 23, 42, 0.85), rgba(8, 47, 73, 0.7));
-      mix-blend-mode: multiply;
-    }
-
-    .hero-content {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: left;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.25rem 0.75rem;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      background: rgba(15,23,42,0.9);
-      color: #e5e7eb;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-badge i {
-      color: var(--bdias-accent);
-    }
-
-    .hero h1 {
-      font-size: clamp(1.9rem, 4vw, 3.2rem);
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero p {
-      max-width: 540px;
-      font-size: 0.98rem;
-      color: #e5e7eb;
-      margin-bottom: 1.5rem;
-    }
-
-    .btn-accent {
-      background: var(--bdias-accent);
-      color: #111827;
-      border-radius: 999px;
-      padding: 0.6rem 1.4rem;
-      font-weight: 600;
-      border: none;
-    }
-
-    .btn-accent:hover {
-      background: #fbbf24;
-      color: #0f172a;
-    }
-
-    .btn-outline-light.rounded-pill {
-      border-width: 1px;
-      padding: 0.55rem 1.4rem;
-      font-weight: 500;
-    }
-
-    /* Section header */
-    .section-header {
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
-
-    .section-kicker {
-      font-size: 0.85rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: #6b7280;
-      font-weight: 600;
-      margin-bottom: 0.35rem;
-    }
-
-    .section-header h2 {
-      font-size: clamp(1.7rem, 3vw, 2.2rem);
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    .section-header p {
-      max-width: 720px;
-      margin: 0 auto;
-      color: #4b5563;
-    }
-
-    /* Welcome / Vision / Mission cards */
-    .bg-soft {
-      background: radial-gradient(circle at top left, #eff6ff, #f9fafb);
-    }
-
-    .pill-tag {
-      display: inline-block;
-      padding: 0.15rem 0.9rem;
-      font-size: 0.75rem;
-      border-radius: 999px;
-      background: rgba(37, 99, 235, 0.1);
-      color: #1d4ed8;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-    }
-
-    .card-soft {
-      border-radius: 1.25rem;
-      border: 1px solid rgba(148, 163, 184, 0.25);
-      background: #ffffff;
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-    }
-
-    .card-soft:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 22px 55px rgba(15, 23, 42, 0.12);
-      border-color: rgba(59, 130, 246, 0.5);
-    }
-
-    /* Icon cards */
-    .icon-circle {
-      width: 52px;
-      height: 52px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(59,130,246,0.12);
-      color: #1d4ed8;
-      margin-bottom: 0.75rem;
-    }
-
-    .icon-circle i {
-      font-size: 1.2rem;
-    }
-
-    /* Programs */
-    .program-card {
-      border-radius: 1.1rem;
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      background: white;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
-      height: 100%;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .program-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(236, 72, 153, 0.08));
-      opacity: 0;
-      transition: opacity .25s ease;
-      pointer-events: none;
-    }
-
-    .program-card:hover::before {
-      opacity: 1;
-    }
-
-    .program-chip {
-      font-size: 0.75rem;
-      padding: 0.1rem 0.85rem;
-      border-radius: 999px;
-      background: rgba(37, 99, 235, 0.1);
-      color: #1d4ed8;
-      display: inline-block;
-      margin-bottom: 0.35rem;
-    }
-
-    .program-meta {
-      font-size: 0.85rem;
-      color: #4b5563;
-    }
-
-    .program-meta b {
-      color: #111827;
-    }
-
-    .program-link {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--bdias-primary);
-      text-decoration: none;
-    }
-
-    .program-link i {
-      font-size: 0.8rem;
-      margin-left: 0.25rem;
-    }
-
-    /* Faculty cards */
-    .faculty-card {
-      border-radius: 1.25rem;
-      border: 1px solid rgba(148, 163, 184, 0.25);
-      background: #ffffff;
-      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.08);
-      overflow: hidden;
-      transition: transform .25s ease, box-shadow .25s ease;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .faculty-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.14);
-    }
-
-    .faculty-img-wrap {
-      position: relative;
-      padding: 1.25rem 1.25rem 0.5rem;
-      text-align: center;
-    }
-
-    .faculty-img-wrap img {
-      border-radius: 999px;
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border: 3px solid #e5e7eb;
-      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.25);
-    }
-
-    .faculty-badge {
-      position: absolute;
-      top: 1rem;
-      left: 1.3rem;
-      padding: 0.2rem 0.75rem;
-      border-radius: 999px;
-      background: rgba(37, 99, 235, 0.12);
-      color: #1d4ed8;
-      font-size: 0.7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-
-    .faculty-body {
-      padding: 0.75rem 1.25rem 1rem;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
-    .faculty-qual {
-      font-size: 0.8rem;
-      color: #6b7280;
-      margin-bottom: 0.25rem;
-    }
-
-    .faculty-research {
-      font-size: 0.8rem;
-      color: #4b5563;
-      margin-bottom: 0.35rem;
-    }
-
-    .faculty-links a {
-      font-size: 0.85rem;
-      margin-right: 0.4rem;
-      color: #4b5563;
-    }
-
-    .faculty-links a:hover {
-      color: var(--bdias-primary);
-    }
-
-    /* Eye Screening stats */
-    .stats-section {
-      background: radial-gradient(circle at top, #0b1120, #020617);
-      color: #e5e7eb;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .stats-section::before {
-      content: "";
-      position: absolute;
-      width: 360px;
-      height: 360px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(59,130,246,0.65), transparent 60%);
-      top: -120px;
-      right: -80px;
-      opacity: 0.3;
-    }
-
-    .stat-card {
-      border-radius: 1rem;
-      padding: 1.25rem;
-      background: rgba(15,23,42,0.7);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      backdrop-filter: blur(10px);
-    }
-
-    .stat-number {
-      font-size: 2.1rem;
-      font-weight: 700;
-      color: var(--bdias-accent);
-    }
-
-    .stat-label {
-      font-size: 0.9rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #cbd5f5;
-    }
-
-    /* Video section */
-    .video-section {
-      padding: 4rem 0;
-      background: #f3f4f6;
-    }
-
-    .video-card {
-      border-radius: 1.5rem;
-      overflow: hidden;
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
-    }
-
-    .video-thumb-wrap {
-      position: relative;
-      cursor: pointer;
-    }
-
-    .video-thumb-wrap img {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
-      filter: brightness(0.7);
-    }
-
-    .play-button {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .play-button span {
-      width: 64px;
-      height: 64px;
-      border-radius: 999px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(250, 250, 250, 0.85);
-      box-shadow: 0 0 0 0 rgba(252, 211, 77, 0.8);
-      animation: pulse 1.8s infinite;
-    }
-
-    .play-button i {
-      font-size: 1.7rem;
-      color: #111827;
-      margin-left: 3px;
-    }
-
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(252, 211, 77, 0.9);
-      }
-      70% {
-        box-shadow: 0 0 0 16px rgba(252, 211, 77, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(252, 211, 77, 0);
-      }
-    }
-
-    /* Contact */
-    .contact-section {
-      padding: 4rem 0 0;
-      background: #020617;
-      color: #e5e7eb;
-    }
-
-    .contact-card {
-      border-radius: 1.25rem;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      padding: 1.75rem;
-      height: 100%;
-    }
-
-    .contact-card h4 {
-      margin-bottom: 0.4rem;
-      font-size: 1.05rem;
-    }
-
-    .contact-card i {
-      width: 28px;
-    }
-
-    .quick-links a {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.25rem 0;
-      color: #e5e7eb;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-
-    .quick-links a:hover {
-      color: var(--bdias-accent);
-    }
-
-    .footer-bottom {
-      background: #020617;
-      border-top: 1px solid rgba(55, 65, 81, 0.75);
-      padding: 0.9rem 0;
-      font-size: 0.85rem;
-      color: #9ca3af;
-    }
-
-    .footer-bottom a {
-      color: #e5e7eb;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .footer-bottom a:hover {
-      color: var(--bdias-accent);
-    }
-
-    /* Announcement floating image (if you still need it) */
-    .modal-ann-img {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1055;
-      max-width: min(90vw, 420px);
-      border-radius: 1rem;
-      box-shadow: 0 18px 55px rgba(15, 23, 42, 0.65);
-      display: none; /* set to block if you want it visible by default */
-    }
-
-    .modal-ann-img img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: inherit;
-    }
-
-    /* Smaller screens */
-    @media (max-width: 767px) {
-      .hero .carousel-item,
-      .hero .carousel-item img {
-        height: 70vh;
-      }
-      .hero-content {
-        text-align: center;
-        padding-inline: 1.2rem;
-      }
-      .hero p {
-        margin-inline: auto;
-      }
-      .hero-actions {
-        justify-content: center;
-      }
-      .top-bar .d-flex {
-        flex-direction: column;
-        gap: 0.25rem;
-        text-align: center;
-      }
-    }
-  </style>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/bdias-main.css">
 </head>
 <body>
 
-  <!-- Top Bar -->
+  <!-- ===== Top Utility Bar (Alumni / Careers / NIRF / IQAC etc.) ===== -->
   <div class="top-bar">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
-        <div class="d-flex align-items-center flex-wrap gap-3">
-          <span><i class="fa fa-phone"></i> +91 2697 265199</span>
-          <span><i class="fa fa-envelope"></i> principal.cips@charusat.ac.in</span>
-        </div>
-        <div class="d-flex align-items-center gap-3">
-          <a href="https://admission.charusat.ac.in" target="_blank">
-            <i class="fa fa-file-pen"></i> Admission Application Form
-          </a>
-          <a href="#contact"><i class="fa fa-location-dot"></i> Visit BDIAS</a>
-        </div>
+    <div class="container flex-between">
+      <div class="top-links">
+        <a href="https://www.charusat.ac.in" target="_blank">CHARUSAT</a>
+        <a href="https://www.charusat.ac.in/alumni" target="_blank">Alumni</a>
+        <a href="https://www.charusat.ac.in/careers.html" target="_blank">Careers</a>
+        <a href="https://www.charusat.ac.in/nirf" target="_blank">NIRF</a>
+        <a href="./NAAC_UPLOAD" target="_blank">IQAC</a>
+      </div>
+      <div class="top-actions">
+        <a href="https://www.charusat.ac.in/search" class="icon-link" aria-label="Search"><i class="fa fa-magnifying-glass"></i></a>
+        <a href="https://admission.charusat.ac.in" target="_blank" class="btn btn-sm btn-accent">Enquire Now – Admission 2025</a>
       </div>
     </div>
   </div>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent sticky-top">
-    <div class="container py-1">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
-        <img src="images/cipslogo.jpg" alt="BDIAS Logo" class="rounded-circle" style="width:36px;height:36px;object-fit:cover;">
-        <span>
-          <strong>BDIAS</strong><br>
-          <small class="text-muted" style="font-size:0.7rem;">A Constituent of CHARUSAT</small>
-        </span>
+  <!-- ===== Main Header / Navigation ===== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="./" class="brand">
+        <img src="images/cipslogo.jpg" alt="BDIAS Logo">
+        <div class="brand-text">
+          <span class="brand-title">BDIAS</span>
+          <span class="brand-subtitle">Bapubhai Desaibhai Patel Institute of Allied and Healthcare Sciences</span>
+        </div>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdiasNavbar">
-        <span class="navbar-toggler-icon"></span>
+
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
       </button>
-      <div class="collapse navbar-collapse" id="bdiasNavbar">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
-          <li class="nav-item"><a class="nav-link" href="#faculty">Faculty</a></li>
-          <li class="nav-item"><a class="nav-link" href="#eye-screening">Eye Screening</a></li>
-          <li class="nav-item"><a class="nav-link" href="#tour">Campus Tour</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-            <a href="https://charusat.ac.in/careers.html" target="_blank" class="btn btn-sm btn-accent">
-              Careers
-            </a>
-          </li>
+
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#faculty">Faculty</a></li>
+          <li><a href="#eye-screening">Eye Screening</a></li>
+          <li><a href="#tour">Campus Tour</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
+      </nav>
+
+      <a href="https://admission.charusat.ac.in" target="_blank" class="btn btn-primary btn-header-cta">
+        Apply Now
+      </a>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hero / Slider -->
-  <section class="hero" id="home">
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <img src="images/slider_images/DSC_0256.JPG" alt="BDIAS Campus">
-          <div class="hero-overlay"></div>
-          <div class="hero-content">
-            <div class="container">
-              <div class="row justify-content-start">
-                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="150">
-                  <div class="hero-badge">
-                    <i class="fa fa-star"></i> NAAC & KCG Rated • Allied Health Sciences
-                  </div>
-                  <h1>Welcome to<br> Bapubhai Desaibhai Patel Institute of Allied and Healthcare Sciences</h1>
-                  <p>
-                    Creating next-generation healthcare professionals through quality education,
-                    extensive clinical training and compassionate patient care.
-                  </p>
-                  <div class="d-flex flex-wrap gap-3 hero-actions">
-                    <a href="#programs" class="btn btn-accent">
-                      View Programs
-                    </a>
-                    <a href="https://admission.charusat.ac.in" target="_blank"
-                       class="btn btn-outline-light rounded-pill">
-                      Apply Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- ===== Hero Slider ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-slider">
 
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <img src="images/slider_images/DSC02003.JPG" alt="Students at BDIAS">
-          <div class="hero-overlay"></div>
-          <div class="hero-content">
-            <div class="container">
-              <div class="row justify-content-start">
-                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="150">
-                  <div class="hero-badge">
-                    <i class="fa fa-user-doctor"></i> Clinical Excellence
-                  </div>
-                  <h1>Empowering Youth<br>Towards Excellence in Healthcare</h1>
-                  <p>
-                    BDIAS blends evidence-based education with real-world hospital exposure,
-                    preparing graduates to excel in diverse Allied Health specializations.
-                  </p>
-                  <div class="d-flex flex-wrap gap-3 hero-actions">
-                    <a href="#about" class="btn btn-accent">
-                      Why BDIAS?
-                    </a>
-                    <a href="#tour" class="btn btn-outline-light rounded-pill">
-                      Watch Campus Tour
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="carousel-item">
-          <img src="images/slider_images/Institute.JPG" alt="BDIAS Institute">
-          <div class="hero-overlay"></div>
-          <div class="hero-content">
-            <div class="container">
-              <div class="row justify-content-start">
-                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="150">
-                  <div class="hero-badge">
-                    <i class="fa fa-flask"></i> Research & Innovation
-                  </div>
-                  <h1>State-of-the-Art Labs & Research Opportunities</h1>
-                  <p>
-                    From rare sugar production to advanced imaging and molecular diagnostics,
-                    our faculty and students contribute to impactful healthcare research.
-                  </p>
-                  <div class="d-flex flex-wrap gap-3 hero-actions">
-                    <a href="#faculty" class="btn btn-accent">
-                      Meet Our Faculty
-                    </a>
-                    <a href="#programs" class="btn btn-outline-light rounded-pill">
-                      Explore Courses
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <!-- Slide 1 -->
+      <div class="hero-slide active" style="--bg:url('images/slider_images/DSC_0256.JPG')">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content" data-animate="fade-up">
+          <span class="hero-kicker">Welcome to BDIAS</span>
+          <h1>Empowering Future Allied Health Professionals</h1>
+          <p>Learn, practice and innovate in a vibrant CHARUSAT ecosystem with strong hospital and community linkages.</p>
+          <div class="hero-actions">
+            <a href="#programs" class="btn btn-accent">Explore Programs</a>
+            <a href="#about" class="btn btn-ghost-light">Know More</a>
           </div>
         </div>
       </div>
 
-      <!-- Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
+      <!-- Slide 2 -->
+      <div class="hero-slide" style="--bg:url('images/slider_images/Institute.JPG')">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content" data-animate="fade-up">
+          <span class="hero-kicker">Clinical & Community</span>
+          <h1>Real-World Training with Modern Infrastructure</h1>
+          <p>State-of-the-art laboratories, diagnostic equipment and field exposure prepare students for global healthcare roles.</p>
+          <div class="hero-actions">
+            <a href="#eye-screening" class="btn btn-accent">Impact in Numbers</a>
+            <a href="#faculty" class="btn btn-ghost-light">Meet Our Faculty</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="hero-slide" style="--bg:url('images/slider_images/expo.jpg')">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content" data-animate="fade-up">
+          <span class="hero-kicker">CHARUSAT Advantage</span>
+          <h1>Holistic Development Beyond the Classroom</h1>
+          <p>Engage in research, outreach, sports and co-curricular activities for balanced professional and personal growth.</p>
+          <div class="hero-actions">
+            <a href="#tour" class="btn btn-accent">Take a Tour</a>
+            <a href="#contact" class="btn btn-ghost-light">Connect with Us</a>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Slider Controls -->
+    <button class="hero-nav hero-prev" aria-label="Previous slide"><i class="fa fa-chevron-left"></i></button>
+    <button class="hero-nav hero-next" aria-label="Next slide"><i class="fa fa-chevron-right"></i></button>
+
+    <div class="hero-dots" id="hero-dots"></div>
   </section>
 
-  <!-- Welcome + Vision + Mission -->
-  <section class="py-5 bg-soft" id="about">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <div class="section-kicker">About BDIAS</div>
+  <!-- ===== About / Welcome Section ===== -->
+  <section class="section" id="about">
+    <div class="container section-inner">
+      <div class="section-header" data-animate="fade-up">
         <h2>Welcome to BDIAS</h2>
         <p>
-          Established in 2016, BDIAS is a constituent institute of CHARUSAT
-          focused on building competent, compassionate and research-oriented Allied Health professionals.
+          Bapubhai Desaibhai Patel Institute of Allied and Healthcare Sciences (BDIAS) is a constituent institute of
+          CHARUSAT established in 2016. The institute aims to develop competent and compassionate allied health
+          professionals through high-quality education, intensive clinical exposure and meaningful community engagement.
         </p>
       </div>
 
-      <div class="row g-4 align-items-stretch">
-        <div class="col-lg-6" data-aos="fade-right">
-          <div class="card-soft p-4 p-md-5 h-100">
-            <span class="pill-tag mb-2">Institute Overview</span>
-            <p class="mb-0" style="text-align:justify;">
-              Bapubhai Desaibhai Patel Institute of Allied and Healthcare Sciences (BDIAS) aims to
-              provide quality education in the field of healthcare. We focus on creating skilled
-              professionals with strong scientific foundations, hands-on clinical exposure, and
-              a humane approach to patient care. Our programs are designed to blend theory,
-              laboratory training and hospital-based experience.
-            </p>
-          </div>
+      <div class="about-grid">
+        <div class="about-card" data-animate="fade-up">
+          <div class="about-icon"><i class="fa fa-lightbulb"></i></div>
+          <h3>Project Based Learning</h3>
+          <p>Hands-on projects, case-based discussions and simulation activities that build confidence and clinical skills.</p>
         </div>
-
-        <div class="col-lg-6" data-aos="fade-left">
-          <div class="row g-4">
-            <div class="col-12">
-              <div class="card-soft p-4">
-                <h4 class="mb-2">Vision</h4>
-                <p class="mb-0">
-                  <em>
-                    To be a leading institute in the field of Allied Health Sciences with
-                    amalgamation of best practices of Education, Research and Patient care.
-                  </em>
-                </p>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="card-soft p-4">
-                <h4 class="mb-2">Mission</h4>
-                <p class="mb-0">
-                  <em>
-                    To prepare skilled allied healthcare professionals by high standard of
-                    education delivery, extensive clinical exposure and research.
-                  </em>
-                </p>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="card-soft p-4 d-flex justify-content-between align-items-center flex-wrap gap-2">
-                <div>
-                  <h5 class="mb-1">PEOs, POs & COs</h5>
-                  <p class="mb-0 small text-muted">
-                    Program Educational Objectives, Program Outcomes and Course Outcomes.
-                  </p>
-                </div>
-                <a href="files/Revised%20_CIPS_PEOs%20POs%20and%20COs.pdf"
-                   target="_blank" class="btn btn-sm btn-outline-primary rounded-pill">
-                  View Document <i class="fa fa-arrow-up-right-from-square ms-1"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+        <div class="about-card" data-animate="fade-up" data-animate-delay="100">
+          <div class="about-icon"><i class="fa fa-flask"></i></div>
+          <h3>State-of-the-Art Research Facilities</h3>
+          <p>Well-equipped laboratories that support advanced diagnostics, imaging and translational healthcare research.</p>
+        </div>
+        <div class="about-card" data-animate="fade-up" data-animate-delay="200">
+          <div class="about-icon"><i class="fa fa-leaf"></i></div>
+          <h3>Holistic Development</h3>
+          <p>Sports, cultural events, outreach and mentoring ensure overall personality growth and professional ethics.</p>
         </div>
       </div>
 
-      <!-- Three highlight cards -->
-      <div class="row g-4 mt-4">
-        <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="50">
-          <div class="card-soft p-4 h-100 text-center">
-            <div class="icon-circle mx-auto">
-              <i class="fa fa-diagram-project"></i>
-            </div>
-            <h5>Project-Based Learning</h5>
-            <p class="small mb-0">
-              Students work on real-world clinical and lab-based projects to develop practical skills and confidence.
-            </p>
-          </div>
+      <div class="vision-mission-grid">
+        <div class="vm-card" data-animate="fade-right">
+          <h3>Vision</h3>
+          <p>To be a leading institute in Allied Health Sciences integrating best practices of education, research and patient care.</p>
         </div>
-        <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="120">
-          <div class="card-soft p-4 h-100 text-center">
-            <div class="icon-circle mx-auto">
-              <i class="fa fa-microscope"></i>
-            </div>
-            <h5>State-of-the-Art Research Facilities</h5>
-            <p class="small mb-0">
-              Advanced laboratories for imaging, pathology, diagnostics and molecular biology support cutting-edge research.
-            </p>
-          </div>
+        <div class="vm-card" data-animate="fade-left">
+          <h3>Mission</h3>
+          <p>To prepare skilled allied healthcare professionals through high-quality teaching, extensive clinical exposure and research-driven learning.</p>
         </div>
-        <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="200">
-          <div class="card-soft p-4 h-100 text-center">
-            <div class="icon-circle mx-auto">
-              <i class="fa fa-seedling"></i>
-            </div>
-            <h5>Holistic Development</h5>
-            <p class="small mb-0">
-              Focus on communication, ethics, empathy and professional behavior to create well-rounded healthcare professionals.
-            </p>
-          </div>
+        <div class="vm-card" data-animate="fade-up">
+          <h3>PEOs, POs & COs</h3>
+          <p>Our programs align with clearly defined educational objectives and outcomes for continuous quality enhancement.</p>
+          <a href="files/Revised%20_CIPS_PEOs%20POs%20and%20COs.pdf" target="_blank" class="link-inline">
+            View Document <i class="fa fa-arrow-right"></i>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Principal Message -->
-  <section class="py-5">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <div class="section-kicker">Leadership</div>
-        <h2>Message from Principal’s Desk</h2>
-      </div>
-      <div class="row g-4 align-items-center">
-        <div class="col-md-4 text-center" data-aos="fade-right">
-          <!-- Use your principal image -->
-          <img src="images/faculty_photo_25/Dr. Dhara Patel.png" alt="Principal"
-               class="img-fluid rounded-4 shadow" style="max-height:280px;object-fit:cover;">
-          <h5 class="mt-3 mb-0">Dr. Dhara N. Patel</h5>
-          <small class="text-muted">Assistant Professor, Principal & I/C Dean Medical Sciences</small>
-        </div>
-        <div class="col-md-8" data-aos="fade-left">
-          <div class="card-soft p-4 p-lg-5">
-            <p class="mb-0" style="text-align:justify;">
-              It is my immense pleasure to introduce Bapubhai Desaibhai Patel Institute of Allied and Healthcare
-              Sciences (BDIAS), constituent of Charotar University of Science and Technology (CHARUSAT), established
-              in 2016. CHARUSAT has been established by promulgation of Gujarat Private University Act, 2009 and is
-              empowered to confer degrees under Section 22 of the UGC Act, 1956. Our University has been awarded Grade
-              A+ by NAAC and KCG.
-            </p>
-            <p class="mt-3 mb-0" style="text-align:justify;">
-              In the hi-tech world of modern healthcare, a team approach is essential to cure illness and sustain life.
-              Our institute offers multiple paramedical programs that build technocrats capable of operating and
-              maintaining advanced instruments and equipment. We believe that paramedical experts must possess strong
-              scientific foundations and perform at a high professional level, while demonstrating empathy and
-              compassion towards patients at every step.
-            </p>
-          </div>
+  <!-- ===== Principal Message ===== -->
+  <section class="section section-alt">
+    <div class="container section-inner principal-grid">
+      <div class="principal-photo" data-animate="fade-right">
+        <div class="principal-card">
+          <img src="images/faculty_photo_25/Dr. Dhara Patel.png" alt="Principal - Dr. Dhara N. Patel">
+          <h3>Dr. Dhara N. Patel</h3>
+          <p>Principal &amp; I/C Dean, Medical Sciences</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Programs Offered -->
-  <section class="py-5" id="programs">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <div class="section-kicker">Academics</div>
-        <h2>Programs Offered</h2>
+      <div class="principal-text" data-animate="fade-left">
+        <h2>Message from the Principal</h2>
         <p>
-          BDIAS offers undergraduate, postgraduate and diploma programs in Allied Health Sciences with strong
-          clinical integration.
+          It is my immense pleasure to introduce Bapubhai Desaibhai Patel Institute of Allied and Healthcare Sciences (BDIAS),
+          a constituent of Charotar University of Science and Technology (CHARUSAT). We offer a range of paramedical programs
+          that address the growing need for highly trained allied health professionals in modern healthcare.
         </p>
-      </div>
-
-      <div class="row g-4">
-
-        <!-- Program 1 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
-          <div class="program-card p-4">
-            <span class="program-chip">UG Program</span>
-            <h5 class="mt-1 mb-2">
-              Bachelor’s of Medical Radiology and Imaging Technology
-            </h5>
-            <ul class="list-unstyled program-meta mb-3">
-              <li><b>Duration:</b> 4 Years</li>
-              <li><b>Intake:</b> 30 Seats</li>
-              <li><b>Fees:</b> ₹65,000 per year</li>
-            </ul>
-            <a href="https://charusat.ac.in/bdips/files/Bachelor%20Of%20Medical%20Laboratory%20Technology.pdf"
-               target="_blank" class="program-link">
-              More details <i class="fa fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Program 2 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="program-card p-4">
-            <span class="program-chip">UG Program</span>
-            <h5 class="mt-1 mb-2">
-              Bachelor of Medical Laboratory Sciences (BMLS)
-            </h5>
-            <ul class="list-unstyled program-meta mb-3">
-              <li><b>Duration:</b> 4 Years</li>
-              <li><b>Intake:</b> 30 Seats</li>
-              <li><b>Fees:</b> ₹55,000 per year</li>
-            </ul>
-            <a href="https://charusat.ac.in/bdips/files/Bachelor%20Of%20Medical%20Radiology.pdf"
-               target="_blank" class="program-link">
-              More details <i class="fa fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Program 3 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
-          <div class="program-card p-4">
-            <span class="program-chip">UG Program</span>
-            <h5 class="mt-1 mb-2">
-              Baccalaureate of Anaesthesia & Operation Theatre Technology (B.AOTT)
-            </h5>
-            <ul class="list-unstyled program-meta mb-3">
-              <li><b>Duration:</b> 4 Years</li>
-              <li><b>Intake:</b> 30 Seats</li>
-              <li><b>Fees:</b> ₹65,000 per year</li>
-            </ul>
-            <a href="https://charusat.ac.in/bdips/files/Bachelor%20Of%20Operation%20Theatre.pdf"
-               target="_blank" class="program-link">
-              More details <i class="fa fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Program 4 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="program-card p-4">
-            <span class="program-chip">UG Program</span>
-            <h5 class="mt-1 mb-2">
-              Bachelor’s of Optometry (BOPTM)
-            </h5>
-            <ul class="list-unstyled program-meta mb-3">
-              <li><b>Duration:</b> 5 Years</li>
-              <li><b>Intake:</b> 20 Seats</li>
-              <li><b>Fees:</b> ₹1,06,000 per year</li>
-            </ul>
-            <a href="https://charusat.ac.in/bdips/files/Bachelor%20of%20Optometry.pdf"
-               target="_blank" class="program-link">
-              More details <i class="fa fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Program 5 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
-          <div class="program-card p-4">
-            <span class="program-chip">PG Program</span>
-            <h5 class="mt-1 mb-2">
-              Masters of Medical Laboratory Sciences (MMLS)
-            </h5>
-            <ul class="list-unstyled program-meta mb-3">
-              <li><b>Duration:</b> 2 Years</li>
-              <li><b>Intake:</b> 30 Seats</li>
-              <li><b>Fees:</b> ₹85,000 per year</li>
-            </ul>
-            <a href="https://charusat.ac.in/bdips/#"
-               target="_blank" class="program-link">
-              More details <i class="fa fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Program 6 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="program-card p-4">
-            <span class="program-chip">PG Program</span>
-            <h5 class="mt-1 mb-2">
-              Master’s of Medical Radiology & Imaging Technology
-            </h5>
-            <ul class="list-unstyled program-meta mb-3">
-              <li><b>Duration:</b> 2 Years</li>
-              <li><b>Intake:</b> 5 Seats</li>
-              <li><b>Fees:</b> ₹1,00,000 per year</li>
-            </ul>
-            <a href="https://charusat.ac.in/bdips/#"
-               target="_blank" class="program-link">
-              More details <i class="fa fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Program 7 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
-          <div class="program-card p-4">
-            <span class="program-chip">PG Program</span>
-            <h5 class="mt-1 mb-2">
-              Master’s in Anaesthesia & Operating Theatre Technology (M.AOTT)
-            </h5>
-            <ul class="list-unstyled program-meta mb-3">
-              <li><b>Duration:</b> 2 Years</li>
-              <li><b>Intake:</b> 10 Seats</li>
-              <li><b>Fees:</b> ₹85,000 per year</li>
-            </ul>
-            <a href="https://charusat.ac.in/bdips/#"
-               target="_blank" class="program-link">
-              More details <i class="fa fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Program 8 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="program-card p-4">
-            <span class="program-chip">PG Diploma</span>
-            <h5 class="mt-1 mb-2">
-              Post Graduate Diploma in Clinical Hypnosis (PGDCH)
-            </h5>
-            <ul class="list-unstyled program-meta mb-3">
-              <li><b>Intake:</b> 30 Seats</li>
-              <li><b>Fees:</b> ₹60,000 per year</li>
-            </ul>
-            <a href="https://charusat.ac.in/bdips/files/PGDCH Prospectus 2021-22.pdf"
-               target="_blank" class="program-link">
-              More details <i class="fa fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-4" data-aos="fade-up">
-        <h6 class="mb-1"><b>For Ph.D. Programs</b></h6>
-        <a href="https://charusat.ac.in#PhD" target="_blank" class="program-link">
-          Click here for details <i class="fa fa-arrow-up-right-from-square ms-1"></i>
-        </a>
+        <p>
+          Our focus is on developing graduates who combine strong scientific foundations, hands-on skills and ethical patient care.
+          Through collaborations with clinicians and researchers, BDIAS creates an environment where students learn to operate and
+          manage advanced diagnostic equipment and contribute meaningfully to healthcare delivery.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Faculty -->
-  <section class="py-5 bg-soft" id="faculty">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <div class="section-kicker">People</div>
+  <!-- ===== Programs Offered ===== -->
+  <section class="section" id="programs">
+    <div class="container section-inner">
+      <div class="section-header" data-animate="fade-up">
+        <h2>Programs Offered</h2>
+        <p>Undergraduate, postgraduate and diploma programs designed to meet emerging demands in Allied and Healthcare Sciences.</p>
+      </div>
+
+      <div class="card-grid">
+        <!-- UG Programs -->
+        <article class="program-card" data-animate="fade-up">
+          <h3>Bachelor's of Medical Radiology and Imaging Technology</h3>
+          <ul>
+            <li><strong>Duration:</strong> 4 Years</li>
+            <li><strong>Intake:</strong> 30 Seats</li>
+            <li><strong>Fees:</strong> ₹ 65,000 / Year</li>
+          </ul>
+          <a href="https://charusat.ac.in/bdips/files/Bachelor%20Of%20Medical%20Laboratory%20Technology.pdf" target="_blank" class="btn-link">
+            More Details <i class="fa fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="program-card" data-animate="fade-up" data-animate-delay="100">
+          <h3>Bachelor of Medical Laboratory Sciences (BMLS)</h3>
+          <ul>
+            <li><strong>Duration:</strong> 4 Years</li>
+            <li><strong>Intake:</strong> 30 Seats</li>
+            <li><strong>Fees:</strong> ₹ 55,000 / Year</li>
+          </ul>
+          <a href="https://charusat.ac.in/bdips/files/Bachelor%20Of%20Medical%20Radiology.pdf" target="_blank" class="btn-link">
+            More Details <i class="fa fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="program-card" data-animate="fade-up" data-animate-delay="200">
+          <h3>Baccalaureate of Anaesthesia and Operation Theatre Technology (B.AOTT)</h3>
+          <ul>
+            <li><strong>Duration:</strong> 4 Years</li>
+            <li><strong>Intake:</strong> 30 Seats</li>
+            <li><strong>Fees:</strong> ₹ 65,000 / Year</li>
+          </ul>
+          <a href="https://charusat.ac.in/bdips/files/Bachelor%20Of%20Operation%20Theatre.pdf" target="_blank" class="btn-link">
+            More Details <i class="fa fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="program-card" data-animate="fade-up">
+          <h3>Bachelor's of Optometry (BOPTM)</h3>
+          <ul>
+            <li><strong>Duration:</strong> 5 Years</li>
+            <li><strong>Intake:</strong> 20 Seats</li>
+            <li><strong>Fees:</strong> ₹ 1,06,000 / Year</li>
+          </ul>
+          <a href="https://charusat.ac.in/bdips/files/Bachelor%20of%20Optometry.pdf" target="_blank" class="btn-link">
+            More Details <i class="fa fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <!-- PG Programs -->
+        <article class="program-card" data-animate="fade-up" data-animate-delay="100">
+          <h3>Masters of Medical Laboratory Sciences (MMLS)</h3>
+          <ul>
+            <li><strong>Duration:</strong> 2 Years</li>
+            <li><strong>Intake:</strong> 30 Seats</li>
+            <li><strong>Fees:</strong> ₹ 85,000 / Year</li>
+          </ul>
+          <a href="https://charusat.ac.in/bdips/#" target="_blank" class="btn-link">
+            More Details <i class="fa fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="program-card" data-animate="fade-up" data-animate-delay="200">
+          <h3>Master's of Medical Radiology and Imaging Technology</h3>
+          <ul>
+            <li><strong>Duration:</strong> 2 Years</li>
+            <li><strong>Intake:</strong> 5 Seats</li>
+            <li><strong>Fees:</strong> ₹ 1,00,000 / Year</li>
+          </ul>
+          <a href="https://charusat.ac.in/bdips/#" target="_blank" class="btn-link">
+            More Details <i class="fa fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="program-card" data-animate="fade-up">
+          <h3>Master's in Anaesthesia and Operation Theatre Technology (M.AOTT)</h3>
+          <ul>
+            <li><strong>Duration:</strong> 2 Years</li>
+            <li><strong>Intake:</strong> 10 Seats</li>
+            <li><strong>Fees:</strong> ₹ 85,000 / Year</li>
+          </ul>
+          <a href="https://charusat.ac.in/bdips/#" target="_blank" class="btn-link">
+            More Details <i class="fa fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="program-card" data-animate="fade-up" data-animate-delay="100">
+          <h3>Post Graduate Diploma in Clinical Hypnosis (PGDCH)</h3>
+          <ul>
+            <li><strong>Intake:</strong> 30 Seats</li>
+            <li><strong>Fees:</strong> ₹ 60,000 / Year</li>
+          </ul>
+          <a href="https://charusat.ac.in/bdips/files/PGDCH Prospectus 2021-22.pdf" target="_blank" class="btn-link">
+            More Details <i class="fa fa-arrow-right"></i>
+          </a>
+        </article>
+      </div>
+
+      <div class="phd-link" data-animate="fade-up">
+        <h3>Interested in Ph.D.?</h3>
+        <p>Explore doctoral opportunities under expert supervision at CHARUSAT.</p>
+        <a href="https://charusat.ac.in#PhD" target="_blank" class="btn btn-primary">Explore Ph.D. Programs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Faculty Section ===== -->
+  <section class="section section-alt" id="faculty">
+    <div class="container section-inner">
+      <div class="section-header" data-animate="fade-up">
         <h2>Faculty Members</h2>
         <p>
-          BDIAS nurtures students with the guidance of experienced faculty working closely
-          with clinicians and researchers in diverse Allied Health domains.
+          BDIAS nurtures next-generation healthcare professionals through a dedicated team of faculty members actively engaged
+          in clinical practice and research in collaboration with CHARUSAT hospitals and institutes.
         </p>
       </div>
 
-      <!-- Sample row of key faculty (you can extend the same structure for all members) -->
-      <div class="row g-4">
+      <!-- NOTE: Showing a sample set. Duplicate the card structure for all remaining faculty. -->
+      <div class="card-grid card-grid-faculty">
         <!-- Principal -->
-        <div class="col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="50">
-          <div class="faculty-card">
-            <div class="faculty-img-wrap">
-              <span class="faculty-badge">Principal</span>
-              <img src="images/faculty_photo_25/Dr. Dhara Patel.png" alt="Dr Dhara Patel">
-            </div>
-            <div class="faculty-body">
-              <h6 class="mb-1">Dr. Dhara N. Patel</h6>
-              <small class="d-block text-muted mb-1">Assistant Professor, Principal & I/C Dean Medical Sciences</small>
-              <div class="faculty-qual">MSc, Ph.D.</div>
-              <div class="faculty-research">
-                Bacterial fluxomics, antimicrobial resistance, bacterial pathogenesis and virulence.
-              </div>
-              <div class="faculty-links mt-auto pt-1">
-                <a href="https://vidwan.inflibnet.ac.in/profile/162145" target="_blank"><i class="fa fa-user"></i></a>
-                <a href="mailto:principal.cips@charusat.ac.in"><i class="fa fa-envelope"></i></a>
-                <a href="tel:+919825287884"><i class="fa fa-phone"></i></a>
-                <a href="https://www.linkedin.com/in/dr-dhara-patel-5372a710b/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-              </div>
-            </div>
+        <article class="faculty-card" data-animate="fade-up">
+          <div class="faculty-photo">
+            <img src="images/faculty_photo_25/Dr. Dhara Patel.png" alt="Dr. Dhara N. Patel">
           </div>
-        </div>
+          <h3>Dr. Dhara N. Patel</h3>
+          <p class="faculty-role">Principal &amp; I/C Dean, Medical Sciences</p>
+          <p class="faculty-qual">M.Sc., Ph.D.</p>
+          <p class="faculty-area">Bacterial fluxomics, antimicrobial resistance, bacterial pathogenesis and virulence.</p>
+          <div class="faculty-links">
+            <a href="https://vidwan.inflibnet.ac.in/profile/162145" target="_blank" title="Profile"><i class="fa fa-user"></i></a>
+            <a href="mailto:principal.cips@charusat.ac.in" title="Email"><i class="fa fa-envelope"></i></a>
+            <a href="tel:+919825287884" title="Call"><i class="fa fa-phone"></i></a>
+            <a href="https://www.linkedin.com/in/dr-dhara-patel-5372a710b" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </article>
 
-        <!-- Head, MIT -->
-        <div class="col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-          <div class="faculty-card">
-            <div class="faculty-img-wrap">
-              <span class="faculty-badge">Head, MIT</span>
-              <img src="images/faculty_photo_25/Manna Debnath.png" alt="Dr Manna Debnath">
-            </div>
-            <div class="faculty-body">
-              <h6 class="mb-1">Dr. Manna Debnath</h6>
-              <small class="d-block text-muted mb-1">Assistant Professor</small>
-              <div class="faculty-qual">MSc MIT, Ph.D.</div>
-              <div class="faculty-research">
-                CT, MRI (cartilage mapping) and interventional radiology.
-              </div>
-              <div class="faculty-links mt-auto pt-1">
-                <a href="https://vidwan.inflibnet.ac.in/profile/163380" target="_blank"><i class="fa fa-user"></i></a>
-                <a href="mailto:mannadebnath.cips@charusat.ac.in"><i class="fa fa-envelope"></i></a>
-                <a href="tel:+919620062208"><i class="fa fa-phone"></i></a>
-                <a href="https://www.linkedin.com/in/manna-debnath-277666121/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-              </div>
-            </div>
+        <!-- Head MIT -->
+        <article class="faculty-card" data-animate="fade-up" data-animate-delay="100">
+          <div class="faculty-photo">
+            <img src="images/faculty_photo_25/Manna Debnath.png" alt="Dr. Manna Debnath">
           </div>
-        </div>
+          <h3>Dr. Manna Debnath</h3>
+          <p class="faculty-role">Head, MIT &amp; Assistant Professor</p>
+          <p class="faculty-qual">M.Sc. MIT, Ph.D.</p>
+          <p class="faculty-area">CT, MRI cartilage mapping and interventional radiology.</p>
+          <div class="faculty-links">
+            <a href="https://vidwan.inflibnet.ac.in/profile/163380" target="_blank"><i class="fa fa-user"></i></a>
+            <a href="mailto:mannadebnath.cips@charusat.ac.in"><i class="fa fa-envelope"></i></a>
+            <a href="tel:+919620062208"><i class="fa fa-phone"></i></a>
+            <a href="https://www.linkedin.com/in/manna-debnath-277666121/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </article>
 
-        <!-- Head, MLT -->
-        <div class="col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="150">
-          <div class="faculty-card">
-            <div class="faculty-img-wrap">
-              <span class="faculty-badge">Head, MLT</span>
-              <img src="images/faculty_photo_25/Dr. Artee Tyagi.png" alt="Dr Artee Tyagi">
-            </div>
-            <div class="faculty-body">
-              <h6 class="mb-1">Dr. Artee Tyagi</h6>
-              <small class="d-block text-muted mb-1">Assistant Professor</small>
-              <div class="faculty-qual">MSc, Ph.D. (CLT)</div>
-              <div class="faculty-research">
-                Clinical infections, diagnostic assays, infection biology, antimicrobial resistance and antibiofilm activities.
-              </div>
-              <div class="faculty-links mt-auto pt-1">
-                <a href="https://vidwan.inflibnet.ac.in/profile/163612" target="_blank"><i class="fa fa-user"></i></a>
-                <a href="mailto:arteetyagi.cips@charusat.ac.in"><i class="fa fa-envelope"></i></a>
-                <a href="tel:+919687684343"><i class="fa fa-phone"></i></a>
-                <a href="https://www.linkedin.com/in/artee-tyagi-6672a21b8/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-              </div>
-            </div>
+        <!-- Head MLT -->
+        <article class="faculty-card" data-animate="fade-up" data-animate-delay="200">
+          <div class="faculty-photo">
+            <img src="images/faculty_photo_25/Dr. Artee Tyagi.png" alt="Dr. Artee Tyagi">
           </div>
-        </div>
+          <h3>Dr. Artee Tyagi</h3>
+          <p class="faculty-role">Head, MLT &amp; Assistant Professor</p>
+          <p class="faculty-qual">M.Sc., Ph.D. (CLT)</p>
+          <p class="faculty-area">Clinical infections, diagnostic assays and antimicrobial resistance.</p>
+          <div class="faculty-links">
+            <a href="https://vidwan.inflibnet.ac.in/profile/163612" target="_blank"><i class="fa fa-user"></i></a>
+            <a href="mailto:arteetyagi.cips@charusat.ac.in"><i class="fa fa-envelope"></i></a>
+            <a href="tel:+919687684343"><i class="fa fa-phone"></i></a>
+          </div>
+        </article>
 
-        <!-- Head, Optometry -->
-        <div class="col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
-          <div class="faculty-card">
-            <div class="faculty-img-wrap">
-              <span class="faculty-badge">Head, Optometry</span>
-              <img src="images/faculty_photo_25/Jaydevsinh Paragara.png" alt="Optom. Jaydevsinh Pargara">
-            </div>
-            <div class="faculty-body">
-              <h6 class="mb-1">Optom. Jaydevsinh Pargara</h6>
-              <small class="d-block text-muted mb-1">Assistant Professor</small>
-              <div class="faculty-qual">M.Optometry, Ph.D. (Pursuing)</div>
-              <div class="faculty-research">
-                Tear film and contact lens interaction, community optometry.
-              </div>
-              <div class="faculty-links mt-auto pt-1">
-                <a href="https://vidwan.inflibnet.ac.in/profile/163221" target="_blank"><i class="fa fa-user"></i></a>
-                <a href="mailto:jaydevsinhpargara.cips@charusat.ac.in"><i class="fa fa-envelope"></i></a>
-                <a href="tel:+919426672211"><i class="fa fa-phone"></i></a>
-                <a href="https://www.linkedin.com/in/jaydevsinh-pargara-56b903295/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-              </div>
-            </div>
+        <!-- Head Optometry -->
+        <article class="faculty-card" data-animate="fade-up" data-animate-delay="300">
+          <div class="faculty-photo">
+            <img src="images/faculty_photo_25/Jaydevsinh Paragara.png" alt="Optom. Jaydevsinh Pargara">
           </div>
-        </div>
+          <h3>Optom. Jaydevsinh Pargara</h3>
+          <p class="faculty-role">Head, Optometry &amp; Assistant Professor</p>
+          <p class="faculty-qual">M. Optometry, Ph.D. (Pursuing)</p>
+          <p class="faculty-area">Tear film, contact lens interaction and community optometry.</p>
+          <div class="faculty-links">
+            <a href="https://vidwan.inflibnet.ac.in/profile/163221" target="_blank"><i class="fa fa-user"></i></a>
+            <a href="mailto:jaydevsinhpargara.cips@charusat.ac.in"><i class="fa fa-envelope"></i></a>
+            <a href="tel:+919426672211"><i class="fa fa-phone"></i></a>
+          </div>
+        </article>
+
+        <!-- Example additional faculty card (template) -->
+        <article class="faculty-card" data-animate="fade-up">
+          <div class="faculty-photo">
+            <img src="images/faculty_photo_25/Prof. Hemant Kumar.png" alt="Dr. Hemant Kumar">
+          </div>
+          <h3>Dr. Hemant Kumar</h3>
+          <p class="faculty-role">Professor, Department of MLT</p>
+          <p class="faculty-qual">M.Sc., Ph.D., DBT-Ramalingaswami Fellow</p>
+          <p class="faculty-area">Structural biology, antibody engineering, diagnostics and chemical biology.</p>
+          <div class="faculty-links">
+            <a href="mailto:hemantkumar.cips@charusat.ac.in"><i class="fa fa-envelope"></i></a>
+            <a href="tel:+919120603548"><i class="fa fa-phone"></i></a>
+          </div>
+        </article>
+
+        <!-- TODO: Copy & modify this article block for all remaining faculty members. -->
       </div>
 
-      <!-- You can continue adding more faculty cards below following the same pattern -->
-      <!-- ... -->
+      <p class="faculty-note" data-animate="fade-up">
+        *For complete faculty details and additional profiles, please contact the institute office.
+      </p>
     </div>
   </section>
 
-  <!-- Eye Screening Stats -->
-  <section class="stats-section py-5" id="eye-screening">
-    <div class="container">
-      <div class="section-header text-center mb-4" data-aos="fade-up">
-        <div class="section-kicker" style="color:#9ca3af;">Community Outreach</div>
-        <h2 class="text-white">School Eye Screening Initiative</h2>
-        <p class="text-gray-300" style="color:#e5e7eb;">
-          BDIAS optometry team conducts community eye screening to detect visual problems early and
-          ensure timely intervention for children.
-        </p>
+  <!-- ===== Eye Screening Stats ===== -->
+  <section class="section stats-section" id="eye-screening">
+    <div class="container section-inner">
+      <div class="section-header" data-animate="fade-up">
+        <h2>Eye Screening – Community Impact</h2>
+        <p>Our Optometry team regularly conducts screening camps for schools and communities around CHARUSAT.</p>
       </div>
 
-      <div class="row g-4 justify-content-center">
-        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="50">
-          <div class="stat-card text-center">
-            <div class="stat-number" data-counter="275">275</div>
-            <div class="stat-label">Total Screened</div>
-          </div>
+      <div class="stats-grid">
+        <div class="stat-card" data-animate="zoom-in">
+          <span class="stat-number counter" data-target="275">0</span>
+          <span class="stat-label">Total Screened</span>
         </div>
-        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="120">
-          <div class="stat-card text-center">
-            <div class="stat-number" data-counter="90">90</div>
-            <div class="stat-label">Refractive Error</div>
-          </div>
+        <div class="stat-card" data-animate="zoom-in" data-animate-delay="100">
+          <span class="stat-number counter" data-target="90">0</span>
+          <span class="stat-label">Refractive Error</span>
         </div>
-        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="190">
-          <div class="stat-card text-center">
-            <div class="stat-number" data-counter="5">05</div>
-            <div class="stat-label">Squint</div>
-          </div>
+        <div class="stat-card" data-animate="zoom-in" data-animate-delay="200">
+          <span class="stat-number counter" data-target="5">0</span>
+          <span class="stat-label">Squint</span>
         </div>
-        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="260">
-          <div class="stat-card text-center">
-            <div class="stat-number" data-counter="3">03</div>
-            <div class="stat-label">Colour Vision Deficiency</div>
-          </div>
+        <div class="stat-card" data-animate="zoom-in" data-animate-delay="300">
+          <span class="stat-number counter" data-target="3">0</span>
+          <span class="stat-label">Colour Vision Deficiency</span>
         </div>
-        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="330">
-          <div class="stat-card text-center">
-            <div class="stat-number" data-counter="36">36</div>
-            <div class="stat-label">Cataract</div>
-          </div>
+        <div class="stat-card" data-animate="zoom-in" data-animate-delay="400">
+          <span class="stat-number counter" data-target="36">0</span>
+          <span class="stat-label">Cataract</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Video Tour -->
-  <section class="video-section" id="tour">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <div class="section-kicker">Discover</div>
+  <!-- ===== Campus Tour Video ===== -->
+  <section class="section section-video" id="tour">
+    <div class="container section-inner">
+      <div class="section-header" data-animate="fade-up">
         <h2>Take a Tour of BDIAS</h2>
+        <p>Experience the campus, labs and learning spaces through a short video tour.</p>
       </div>
-
-      <div class="video-card" data-aos="zoom-in">
-        <div class="video-thumb-wrap" data-bs-toggle="modal" data-bs-target="#videoModal">
-          <!-- You can replace this thumbnail with a nicer still image -->
-          <img src="images/slider_images/expo.jpg" alt="BDIAS Video Tour">
-          <div class="play-button">
-            <span><i class="fa fa-play"></i></span>
-          </div>
+      <div class="video-wrapper" data-animate="fade-up">
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/JVcSuvkcHDA?rel=0"
+            title="BDIAS Campus Tour"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact & Quick Links -->
-  <section class="contact-section" id="contact">
-    <div class="container pb-4">
-      <div class="row g-4 align-items-start">
-        <div class="col-md-6" data-aos="fade-right">
-          <div class="contact-card">
-            <h2 class="mb-2">Contact Info</h2>
-            <p class="mb-4 text-muted">
-              Welcome to BDIAS–CHARUSAT. We are glad to have you around.
-            </p>
-
-            <div class="d-flex align-items-start mb-3">
-              <i class="fa fa-phone mt-1 me-2"></i>
-              <div>
-                <h4>Phone</h4>
-                <p class="mb-0">+91 2697 265311</p>
-              </div>
-            </div>
-
-            <div class="d-flex align-items-start mb-3">
-              <i class="fa fa-envelope mt-1 me-2"></i>
-              <div>
-                <h4>Email</h4>
-                <p class="mb-0">principal.cips@charusat.ac.in</p>
-              </div>
-            </div>
-
-            <div class="d-flex align-items-start mb-3">
-              <i class="fa fa-location-dot mt-1 me-2"></i>
-              <div>
-                <h4>Location</h4>
-                <p class="mb-0">
-                  Off. Nadiad-Petlad Highway, Changa-388421, Anand, Gujarat, India
-                </p>
-              </div>
-            </div>
-
-            <div class="d-flex gap-3 mt-3">
-              <a href="#" class="text-white fs-5"><i class="fa-brands fa-facebook"></i></a>
-              <a href="#" class="text-white fs-5"><i class="fa-brands fa-x-twitter"></i></a>
-              <a href="#" class="text-white fs-5"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6" data-aos="fade-left">
-          <div class="contact-card">
-            <h3 class="mb-3">Quick Links</h3>
-            <div class="quick-links mb-4">
-              <a href="https://charusat.ac.in/careers.html" target="_blank">
-                <i class="fa fa-link"></i> Careers
-              </a>
-              <a href="#myModal_NIRF" data-bs-toggle="modal">
-                <i class="fa fa-link"></i> NIRF Reports
-              </a>
-              <a href="./NAAC_UPLOAD">
-                <i class="fa fa-link"></i> IQAC / NAAC
-              </a>
-              <a href="https://drive.google.com/drive/folders/1CEgi0xblK3dGuZrLItqGIgzOrsJctzB1?usp=sharing" target="_blank">
-                <i class="fa fa-link"></i> Student Handbook
-              </a>
-              <a href="https://drive.google.com/drive/folders/1soRuBw6m0VjG9VHod16luOXeoJgzMJiZ?usp=sharing" target="_blank">
-                <i class="fa fa-link"></i> Syllabus
-              </a>
-              <a href="https://drive.google.com/drive/u/1/folders/1U1hIPybwqdsF9Nn_K6QKom0Kg5yAWCaW" target="_blank">
-                <i class="fa fa-link"></i> Old Question Papers
-              </a>
-            </div>
-
-            <!-- Optional embedded map -->
-            <div class="ratio ratio-16x9 rounded-3 overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps?q=CHARUSAT+University+Changa&output=embed"
-                style="border:0;" allowfullscreen loading="lazy"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer bottom -->
-    <div class="footer-bottom">
-      <div class="container text-center">
-        © Copyright BDIAS –
-        <a href="https://www.charusat.ac.in" target="_blank">CHARUSAT</a> |
-        All rights reserved
-      </div>
-    </div>
-  </section>
-
-  <!-- Video Modal -->
-  <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content bg-black">
-        <div class="modal-body p-0 position-relative">
-          <button type="button" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2"
-                  data-bs-dismiss="modal">
-            <i class="fa fa-xmark"></i>
-          </button>
-          <div class="ratio ratio-16x9">
-            <iframe id="videoIframe"
-                    src=""
-                    title="BDIAS Campus Tour"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Optional Floating Announcement Image -->
-  <div class="modal-ann-img" id="modalAnn">
-    <img src="./images/common/CAHR1.jpg" alt="Announcement">
-  </div>
-
-  <!-- NIRF Modal (kept from your original structure, simplified) -->
-  <div class="modal fade" id="myModal_NIRF" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">National Institutional Ranking Framework (NIRF)</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <h6>Reports:</h6>
-          <ul>
-            <li><a href="../flipbooks/NIRF_PDPIAS_2021" target="_blank">NIRF Report 2021</a></li>
-            <li><a href="../flipbooks/PDPIAS_NIRF_2020" target="_blank">NIRF Report 2020</a></li>
-            <li><a href="../flipbooks/NIRF_2019_PDPIAS" target="_blank">NIRF Report 2019</a></li>
-            <li><a href="../flipbooks/NIRF_2018_PDPIAS" target="_blank">NIRF Report 2018</a></li>
+  <!-- ===== Contact & Quick Links (Footer style like CHARUSAT) ===== -->
+  <footer class="footer" id="contact">
+    <div class="footer-main" id="contact-inner">
+      <div class="container footer-grid">
+        <!-- Contact Column -->
+        <div class="footer-col" data-animate="fade-up">
+          <h3>Contact</h3>
+          <ul class="footer-list">
+            <li>
+              <i class="fa fa-location-dot"></i>
+              Charotar University of Science and Technology (CHARUSAT)<br>
+              BDIAS, CHARUSAT Campus,<br>
+              Off. Nadiad-Petlad Highway, Changa-388421,<br>
+              Anand, Gujarat, India
+            </li>
+            <li>
+              <i class="fa fa-phone"></i>
+              +91 2697 265311
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i>
+              principal.cips@charusat.ac.in
+            </li>
+            <li>
+              <i class="fa fa-clock"></i>
+              Mon – Sat: 09:00 AM – 4:30 PM<br>
+              <span class="footer-small">(Except Public Holidays and 2nd &amp; 4th Saturdays)</span>
+            </li>
           </ul>
-          <hr>
-          <h6>Contact Person</h6>
-          <p class="mb-0">
-            Dr. Abhisek Dadhania <br>
-            <a href="mailto:iqac.pdpias@charusat.ac.in">iqac.pdpias@charusat.ac.in</a>
-          </p>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer-col" data-animate="fade-up" data-animate-delay="100">
+          <h3>Quick Links</h3>
+          <ul class="footer-list footer-links">
+            <li><a href="https://www.charusat.ac.in/student-corner" target="_blank">Exam Result</a></li>
+            <li><a href="https://www.charusat.ac.in/student-corner" target="_blank">Pay Fees</a></li>
+            <li><a href="https://www.charusat.ac.in/student-corner" target="_blank">Downloads</a></li>
+            <li><a href="https://www.charusat.ac.in/alumni" target="_blank">Alumni Portal</a></li>
+            <li><a href="https://www.charusat.ac.in/give-support" target="_blank">Donations</a></li>
+            <li><a href="https://www.charusat.ac.in/mandatory-disclosures" target="_blank">Policies &amp; Procedures</a></li>
+            <li><a href="https://www.charusat.ac.in/ugc" target="_blank">UGC</a></li>
+          </ul>
+        </div>
+
+        <!-- Misc Column (similar to screenshot) -->
+        <div class="footer-col" data-animate="fade-up" data-animate-delay="200">
+          <h3>Miscellaneous</h3>
+          <ul class="footer-list footer-links">
+            <li><a href="https://www.charusat.ac.in/calendar" target="_blank">Academic Calendar</a></li>
+            <li><a href="https://www.charusat.ac.in/public-holidays" target="_blank">Public Holidays</a></li>
+            <li><a href="https://www.charusat.ac.in/campus-map" target="_blank">Campus Map</a></li>
+            <li><a href="https://www.charusat.ac.in/code-of-conduct" target="_blank">Code of Conduct</a></li>
+            <li><a href="https://www.charusat.ac.in/notifications" target="_blank">Notifications</a></li>
+            <li><a href="https://www.charusat.ac.in/media-center" target="_blank">Media Center</a></li>
+          </ul>
         </div>
       </div>
     </div>
+
+    <div class="footer-bottom">
+      <div class="container flex-between">
+        <p>© 2025 <strong>CHARUSAT</strong> | All rights reserved</p>
+        <div class="footer-bottom-links">
+          <a href="https://www.charusat.ac.in/mandatory-disclosures" target="_blank">Mandatory Disclosure &amp; Compliance</a>
+          <span class="divider">|</span>
+          <a href="https://www.charusat.ac.in/privacy-policy" target="_blank">Privacy Policy</a>
+          <span class="divider">|</span>
+          <a href="https://www.charusat.ac.in/disclaimer" target="_blank">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Floating Admission Button (like CHARUSAT popup) ===== -->
+  <div class="floating-enquire">
+    <button class="floating-btn">
+      <span>Enquire Now – UG/PG Admission 2025</span>
+      <i class="fa fa-arrow-right"></i>
+    </button>
+    <div class="floating-panel">
+      <h4>Start Your Journey at BDIAS</h4>
+      <p>Click below to fill out the online admission application form.</p>
+      <a href="https://admission.charusat.ac.in" target="_blank" class="btn btn-accent btn-block">Go to Application Portal</a>
+    </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-  <script>
-    // AOS init
-    AOS.init({
-      duration: 700,
-      once: true,
-      offset: 80
-    });
-
-    // Navbar scroll behavior
-    const nav = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    });
-
-    // Counter animation
-    function animateCounters() {
-      const counters = document.querySelectorAll('[data-counter]');
-      const speed = 800; // ms
-
-      counters.forEach(counter => {
-        const target = +counter.getAttribute('data-counter');
-        const start = 0;
-        const startTime = performance.now();
-
-        function update(now) {
-          const elapsed = now - startTime;
-          const progress = Math.min(elapsed / speed, 1);
-          const value = Math.floor(start + (target - start) * progress);
-          counter.textContent = value.toString().padStart(2, '0');
-          if (progress < 1) {
-            requestAnimationFrame(update);
-          }
-        }
-
-        requestAnimationFrame(update);
-      });
-    }
-
-    let countersStarted = false;
-    window.addEventListener('scroll', () => {
-      if (countersStarted) return;
-      const section = document.getElementById('eye-screening');
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        countersStarted = true;
-        animateCounters();
-      }
-    });
-
-    // Video modal: autoplay when open, stop when closed
-    const videoModal = document.getElementById('videoModal');
-    const videoIframe = document.getElementById('videoIframe');
-    const videoUrl = "https://www.youtube.com/embed/JVcSuvkcHDA?autoplay=1&start=303";
-
-    videoModal.addEventListener('show.bs.modal', () => {
-      videoIframe.src = videoUrl;
-    });
-    videoModal.addEventListener('hidden.bs.modal', () => {
-      videoIframe.src = "";
-    });
-
-    // Optional floating announcement: click anywhere to close
-    const modalAnn = document.getElementById('modalAnn');
-    if (modalAnn) {
-      // To show by default, uncomment next line
-      // modalAnn.style.display = 'block';
-
-      modalAnn.addEventListener('click', () => {
-        modalAnn.style.display = 'none';
-      });
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          modalAnn.style.display = 'none';
-        }
-      });
-    }
-  </script>
+  <!-- Main JS -->
+  <script src="js/bdias-main.js" defer></script>
 </body>
 </html>
